@@ -14,9 +14,10 @@ const Part = (props) => (
     <p>{props.part.name} {props.part.exercises}</p>
 )
 
-const Total = (props) => (
-    <p>Number of exercises {props.course.parts[0].exercises + props.course.parts[1].exercises + props.course.parts[2].exercises}</p>
-)
+const Total = (props) => {
+    const total = props.course.parts[0].exercises + props.course.parts[1].exercises + props.course.parts[2].exercises
+    return (<p>Number of exercises {total}</p>)
+}
 
 
 const App = () => {
